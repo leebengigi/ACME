@@ -1,0 +1,470 @@
+# .gitignore for ACME Security Bot Project
+
+# ================================
+# Security & Credentials
+# ================================
+# NEVER commit these!
+.env
+.env.local
+.env.*.local
+**/config/secrets.py
+**/slack_tokens.txt
+**/*_secret*
+**/*_token*
+**/*_key*
+credentials.json
+secrets/
+
+# Slack App credentials (be extra careful)
+SLACK_BOT_TOKEN
+SLACK_APP_TOKEN
+SLACK_SIGNING_SECRET
+
+# ================================
+# Python
+# ================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ================================
+# AI/ML Models & Data
+# ================================
+# Model files (often large)
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pb
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Model directories
+models/
+checkpoints/
+model_cache/
+transformers_cache/
+huggingface_cache/
+.transformers_cache/
+
+# Training data & outputs
+data/raw/
+data/processed/
+training_logs/
+tensorboard_logs/
+wandb/
+mlruns/
+
+# Large datasets
+*.csv.gz
+*.parquet
+*.feather
+large_datasets/
+
+# ================================
+# Database Files
+# ================================
+# SQLite databases (contain sensitive data)
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite
+security_requests.db
+acme_security.db
+
+# Database backups
+*.db.backup
+*.sql.backup
+
+# ================================
+# Testing & Development
+# ================================
+# Test outputs
+test_reports/
+test_results/
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Development databases
+test.db
+dev.db
+local.db
+
+# Temporary test files
+temp_test_*
+test_temp_*
+
+# ================================
+# IDE & Editor Files
+# ================================
+# VSCode
+.vscode/
+!.vscode/settings.json.example
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ================================
+# Operating System
+# ================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# Logs & Runtime Files
+# ================================
+# Application logs
+logs/
+*.log
+*.log.*
+log_*
+slack_bot.log
+security_bot.log
+
+# Runtime files
+*.pid
+*.pid.lock
+pids/
+
+# ================================
+# Deployment & Docker
+# ================================
+# Docker
+Dockerfile.local
+docker-compose.override.yml
+.dockerignore.local
+
+# Kubernetes
+*.kubeconfig
+k8s-secrets/
+
+# Cloud deployment
+.gcloud/
+.aws/
+.azure/
+
+# ================================
+# Project Specific
+# ================================
+# ACME Security Bot specific files
+
+# Configuration overrides
+config/local_settings.py
+config/production_settings.py
+
+# Data exports (may contain sensitive info)
+exports/
+data_exports/
+customer_data/
+
+# Backup files
+backups/
+*.backup
+
+# Performance monitoring
+performance_logs/
+monitoring/
+
+# Custom model training
+custom_models/
+fine_tuned_models/
+
+# Slack app development
+slack_app_manifest.json.local
+ngrok_config/
+
+# CSV files with real data (keep sample data)
+acme_security_tickets.csv
+real_ticket_data.csv
+production_data.csv
+# But keep sample/test data:
+# !sample_data.csv
+# !test_tickets.csv
+
+# ================================
+# Documentation Build
+# ================================
+docs/_build/
+docs/site/
+mkdocs_site/
+
+# ================================
+# Temporary & Cache Files
+# ================================
+# General temporary files
+tmp/
+temp/
+cache/
+.cache/
+
+# Package manager caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
+
+# ================================
+# Security Scanning
+# ================================
+# Security scan results
+.bandit
+.safety
+security_reports/
+
+# ================================
+# Ignore but keep directory structure
+# ================================
+# Keep empty directories with .gitkeep
+!.gitkeep
+
+# ================================
+# Example/Template Files
+# ================================
+# Keep example files but ignore local versions
+!config/settings.py.example
+!.env.example
+!slack_tokens.txt.example
+
+# ================================
+# Performance & Profiling
+# ================================
+# Python profiling
+*.prof
+*.pstats
+profile_*
+
+# Memory profiling
+*.mprofile
+
+# ================================
+# Additional Notes
+# ================================
+# This .gitignore is designed for the ACME Security Bot project
+# It prioritizes security by excluding all potential sensitive data
+# Review and customize based on your specific needs
+#
+# Remember to:
+# 1. Never commit real Slack tokens or credentials
+# 2. Keep sample data for testing but exclude real customer data  
+# 3. Exclude large model files from the repository
+# 4. Use environment variables for all sensitive configuration
