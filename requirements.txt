@@ -1,0 +1,42 @@
+# Core dependencies
+slack-bolt>=1.14.0
+python-dotenv>=0.19.0
+
+# Machine Learning
+transformers>=4.30.0
+torch>=2.0.0
+scikit-learn>=1.0.0
+pandas>=1.5.0
+numpy>=1.24.0
+torchvision
+torchaudio
+
+# Database
+sqlite3i  # Built into Python
+
+# Testing
+pytest>=7.0.0
+pytest-mock>=3.7.0
+pytest-asyncio>=0.19.0
+pytest-cov>=4.0.0
+
+# Development
+black>=22.0.0
+flake8>=4.0.0
+isort>=5.10.0
+
+# Optional: for advanced features
+# spacy>=3.4.0  # For better NLP
+# nltk>=3.7  # For text processing
+
+# Added from the code block
+huggingface-hub>=0.16.0
+logging>=0.5.1.2
+tqdm>=4.65.0
+accelerate>=0.20.0
+bitsandbytes>=0.41.0
+
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+
